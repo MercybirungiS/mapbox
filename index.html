@@ -9,45 +9,16 @@
 
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+<iframe width='100%' height='400px' src="https://api.mapbox.com/styles/v1/birungi/ckx2sjncx48et14o7p0qj2hn6.html?title=false&access_token=pk.eyJ1IjoiYmlydW5naSIsImEiOiJja3gwYmp5bnAwMTZ6MnZwaHJvbTJwMXVrIn0.XdfuQZRpdZaWnvTRTYzCgQ&zoomwheel=false#6.11/0.543/32.033" title="Blank" style="border:none;"></iframe>
 
 </head>
 <body>
   <div id='map' style='width: 100%; height: 500px;'></div>
-  <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYmlydW5naSIsImEiOiJja3gwYmp5bnAwMTZ6MnZwaHJvbTJwMXVrIn0.XdfuQZRpdZaWnvTRTYzCgQ';
-    var map = new mapboxgl.Map({
-      container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [5, 46],
-      zoom: 3
-    });
-    
+   <script>
+   
 
-    map.on('load', function() {
-      map.addLayer(
-        {
-          id: 'country-boundaries',
-          source: {
-            type: 'vector',
-            url: 'mapbox://mapbox.country-boundaries-v1',
-          },
-          'source-layer': 'country_boundaries',
-          type: 'fill',
-          paint: {
-            'fill-color': '#d2361e',
-            'fill-opacity': 0.4,
-          },
-        },
-        'country-label'
-      );
-
-      map.setFilter('country-boundaries', [
-        "in",
-        "iso_3166_1_alpha_3",
-        'NLD',
-        'ITA'
-      ]);
-    });
+   
+      
   </script>
    
 </body>
